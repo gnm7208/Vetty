@@ -4,13 +4,18 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass, field
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_DB_PATH = PROJECT_ROOT / "instance" / "app.db"
 
 
 @dataclass()
 class BaseConfig:
     SECRET_KEY: str = os.getenv("SECRET_KEY", "dev-secret-key")
     SQLALCHEMY_DATABASE_URI: str = os.getenv(
-        "DATABASE_URL", "sqlite:///instance/app.db"
+        "DATABASE_URL", f"sqlite:///{DEFAULT_DB_PATH}"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS: bool = False
     JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "dev-jwt-secret")
