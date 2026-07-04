@@ -63,7 +63,7 @@ def seed():
             products.append(product)
 
         services = []
-        for idx in range(5):
+        for _idx in range(5):
             service = Service(
                 title=fake.catch_phrase(),
                 description=fake.paragraph(nb_sentences=3),
@@ -109,7 +109,6 @@ def seed():
 
         db.session.commit()
 
-        bookings = []
         for _ in range(8):
             customer = random.choice(customers)
             service = random.choice(services)

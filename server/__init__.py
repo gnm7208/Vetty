@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
-from typing import TYPE_CHECKING
 
 from dotenv import load_dotenv
 from flask import Flask
@@ -14,10 +13,6 @@ from .auth import register_jwt_callbacks
 from .config import get_config
 from .errors import register_error_handlers
 from .extensions import cors, db, init_marshmallow, jwt, migrate
-
-if TYPE_CHECKING:  # pragma: no cover - aids type checkers only
-    from flask_restful import Api
-
 
 def create_app(config_name: str | None = None) -> Flask:
     """Create and configure a Flask application instance."""
