@@ -14,6 +14,7 @@ from .config import get_config
 from .errors import register_error_handlers
 from .extensions import cors, db, init_marshmallow, jwt, migrate
 
+
 def create_app(config_name: str | None = None) -> Flask:
     """Create and configure a Flask application instance."""
 
