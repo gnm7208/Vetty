@@ -7,7 +7,6 @@ from sqlalchemy import CheckConstraint, Column, Enum, ForeignKey, Integer, Strin
 from ..extensions import db
 from .base import BaseModel, TimestampMixin
 
-
 ORDER_STATUSES = (
     "pending",
     "approved",

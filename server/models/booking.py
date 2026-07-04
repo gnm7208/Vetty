@@ -2,12 +2,11 @@
 
 from __future__ import annotations
 
-from sqlalchemy import Column, Enum, ForeignKey, Integer, Text
+from sqlalchemy import Column, Enum, ForeignKey, Text
 from sqlalchemy.types import DateTime
 
 from ..extensions import db
 from .base import BaseModel, TimestampMixin
-
 
 BOOKING_STATUSES = (
     "pending",

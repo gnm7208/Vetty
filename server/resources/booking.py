@@ -11,7 +11,7 @@ from flask_restful import Resource, abort
 from ..extensions import db
 from ..models import Service, ServiceBooking
 from ..schemas import ServiceBookingSchema, ServiceBookingWriteSchema
-from .utils import get_current_user, require_admin
+from .utils import get_current_user
 
 booking_schema = ServiceBookingSchema()
 bookings_schema = ServiceBookingSchema(many=True)

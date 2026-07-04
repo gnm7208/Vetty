@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from sqlalchemy import Column, ForeignKey, Integer, Numeric, String, Text
+from sqlalchemy import Column, ForeignKey, Integer, String, Text
 
 from ..extensions import db
 from .base import BaseModel, TimestampMixin
